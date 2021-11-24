@@ -17,5 +17,5 @@ This project explores US Bikeshare data by use of descriptive statistics. Users 
 The files used for the project are bikeshare.py(main), washington.csv(data file), new_york_city.csv(data file), chicago.csv(data file)
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+Credit to defltstack.com, w3schools.com, pandas.pydata.org, and the entire udacity team for programming for datascience track.
 
