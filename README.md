@@ -7,7 +7,11 @@ This Project was created on 14/11/2021 and README file was created on 25/11/2021
 US Bikeshare Data Exploration
 
 ### Description
-Describe what your project is about and what it does
+This project explores US Bikeshare data by use of descriptive statistics. Users get to selected data based on city, filter by month and day (or choose all), then are presented with key summary of the data showing 
+ - User Statistics
+ - Time Statistics 
+ - Travel Station Statistics 
+ - Trip Duration Statistics
 
 ### Files used
 Include the files used
