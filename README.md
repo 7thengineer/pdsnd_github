@@ -14,7 +14,7 @@ This project explores US Bikeshare data by use of descriptive statistics. Users 
  - Trip Duration Statistics
 
 ### Files used
-Include the files used
+The files used for the project are bikeshare.py(main), washington.csv(data file), new_york_city.csv(data file), chicago.csv(data file)
 
 ### Credits
 It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
