@@ -322,6 +322,19 @@ def main():
         city, month, day = get_filters()
         df = load_data(city, month, day)
 
+        while True:
+            try:
+                stat_ref = int(input('What statistics would you like to see displayed?\navailable statistics are time statistics, station statistics, trip statistics and user statistics.\npress 1  for time statistics\npress 2 for station statistics\npress 3 for trip statistics\npress 4 for user statistics\n'))
+
+                stat_list = ('time', 'station', 'trip', 'user')
+
+            except Exception as e:
+                print('\nPlease check your input!,\n Exception Occurred: {}, \n\n we don\'t have that city on our database\n'.format(e))
+
+            else:
+                stat = stat_list[(stat_ref - 1)]
+                break
+
         time_stats(df, city, month, day)
         station_stats(df, city, month, day)
         trip_duration_stats(df, city, month, day)
