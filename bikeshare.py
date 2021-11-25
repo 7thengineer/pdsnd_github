@@ -197,6 +197,7 @@ def station_stats(df, city, month, day):
     start_time = time.time()
 
     # TO DO: display most commonly used start station
+    # Check if column(s) to be referenced exists in DataFrame to avoid error
     if 'Start Station' in set(df.columns):
         common_start_station = df['Start Station'].mode()
         print('\nThe most commonly used start station(s) for City: {}, Month: {}, Day: {} is:\n'.format(city,month,day))
@@ -204,6 +205,7 @@ def station_stats(df, city, month, day):
             print(value)
 
     # TO DO: display most commonly used end station
+    # Check if column(s) to be referenced exists in DataFrame to avoid error
     if 'End Station' in set(df.columns):
         common_end_station = df['End Station'].mode()
         print('\nThe most commonly used end station(s) for City: {}, Month: {}, Day: {} is:\n'.format(city,month,day))
@@ -211,6 +213,7 @@ def station_stats(df, city, month, day):
             print(value)
 
     # TO DO: display most frequent combination of start station and end station trip
+    # Check if column(s) to be referenced exists in DataFrame to avoid error
     if 'Start Station' in set(df.columns) and 'End Station' in set(df.columns):
         df['Trip Combination'] = df['Start Station'] + ' ' + 'to' + ' ' + df['End Station']
         most_common_trip = df['Trip Combination'].mode()
@@ -229,6 +232,7 @@ def trip_duration_stats(df, city, month, day):
     start_time = time.time()
 
     # TO DO: display total travel time
+    # Check if column(s) to be referenced exists in DataFrame to avoid error
     if 'Trip Duration' in set(df.columns):
         total_travel_time = df['Trip Duration'].sum()
         print('\nThe total travel time for City: {}, Month: {}, Day: {} is:\n{} {}'.format(city,month,day,total_travel_time,'Seconds'))
@@ -249,16 +253,19 @@ def user_stats(df, city, month, day):
     start_time = time.time()
 
     # TO DO: Display counts of user types
+    # Check if column(s) to be referenced exists in DataFrame to avoid error
     if 'User Type' in set(df.columns):
         user_type_count = df['User Type'].value_counts()
         print('\nThe User type Count for City: {}, Month: {}, Day: {} is:\n'.format(city,month,day),user_type_count)
 
     # TO DO: Display counts of gender
+    # Check if column(s) to be referenced exists in DataFrame to avoid error
     if 'Gender' in set(df.columns):
         gender_count = df['Gender'].value_counts()
         print('\nThe Gender Count for City: {}, Month: {}, Day: {} is:\n'.format(city,month,day),gender_count)
 
     # TO DO: Display earliest, most recent, and most common year of birth
+    # Check if column(s) to be referenced exists in DataFrame to avoid error
     if 'Birth Year' in set(df.columns):
         earliest_yob = int(df['Birth Year'].min())
         print('\nThe earliest year of birth of users for City: {}, Month: {}, Day: {} is:\n'.format(city,month,day),earliest_yob)
@@ -278,6 +285,7 @@ def user_stats(df, city, month, day):
     current_year = int(current_date.strftime("%Y"))
 
     # create new column to label age class distribution
+    # Check if column(s) to be referenced exists in DataFrame to avoid error
     if 'Birth Year' in df.columns:
         #create a new column for age class
         df['Age Class'] = df['Birth Year'].copy()
