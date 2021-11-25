@@ -333,13 +333,21 @@ def main():
 
             else:
                 stat = stat_list[(stat_ref - 1)]
-                break
+                if stat == 'time':
+                    time_stats(df, city, month, day)
+                elif stat == 'station':
+                    station_stats(df, city, month, day)
+                elif stat == 'trip':
+                    trip_duration_stats(df, city, month, day)
+                elif stat == 'user':
+                    user_stats(df, city, month, day)
 
-        time_stats(df, city, month, day)
-        station_stats(df, city, month, day)
-        trip_duration_stats(df, city, month, day)
-        user_stats(df, city, month, day)
-
+                see_another_stat = input('\nWould you like to see another statistics? Enter yes or no.\n')
+                if see_another_stat.lower() != 'yes':
+                    break       
+        
+        
+        
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
