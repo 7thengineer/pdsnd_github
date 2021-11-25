@@ -327,9 +327,12 @@ def user_stats(df, city, month, day):
 
 def main():
     while True:
+        #get filters by collecting return of get_filters function as variable
         city, month, day = get_filters()
+        #load city data
         df = load_data(city, month, day)
 
+        #run descriptive statistics functions
         time_stats(df, city, month, day)
         station_stats(df, city, month, day)
         trip_duration_stats(df, city, month, day)
