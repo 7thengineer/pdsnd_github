@@ -332,7 +332,7 @@ def main():
         #load city data
         df = load_data(city, month, day)
 
-        #run descriptive statistics functions
+        #run descriptive statistics functions based on user selection(choice of display)
         time_stats(df, city, month, day)
         station_stats(df, city, month, day)
         trip_duration_stats(df, city, month, day)
