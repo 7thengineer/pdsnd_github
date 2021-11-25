@@ -1,1 +1,6 @@
 .github/**
+.github/**
+*.png
+*.csv
+*.JPEG
+*.PDF
